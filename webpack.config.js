@@ -38,7 +38,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loaders: 'babel-loader',
+                        loader: 'babel-loader',
                         options: {
                             presets: ['es2015'],
                             plugins:['transform-runtime']
