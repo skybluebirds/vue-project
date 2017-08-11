@@ -5,7 +5,7 @@ import ComptIndex from '../component/index.vue';
 // 创建组件
 
 
-// 这额js对外到处一个路由实例
+// 这个js对外暴露一个路由实例
 export default new VueRouter({
     routes: [
         { path: '/', redirect: '/index' },
