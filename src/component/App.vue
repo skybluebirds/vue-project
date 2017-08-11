@@ -1,13 +1,23 @@
 <template>
-  <main>
-      <router-view></router-view>
-  </main>
+    <main>
+        <v-header></v-header>
+        <router-view></router-view>
+        <v-footer></v-footer>
+    </main>
 </template>
 
 <script>
-    export default{
-        
+import Cfooter from './home/footer.vue';
+import Cheader from './home/header.vue';
+export default {
+    data() {
+        return {}
+    },
+    components: {
+        'v-header': Cheader,
+        'v-footer': Cfooter
     }
+}
 </script>
 
 <style>
