@@ -3,10 +3,15 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
+import MintUI from 'mint-ui';  //导入mint-ui组件js内容
+import 'mint-ui/lib/style.css';    //导入mint-ui组件的css
+import 'mui/dist/css/mui.css';  //导入mui的组件样式css
+import 'mui/examples/hello-mui/css/icons-extra.css';    //导入mui组件扩展组件的css样式
 
 // 1.1、在vue中使用路由,手动启用插件
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(MintUI);
 
 // 二、
 

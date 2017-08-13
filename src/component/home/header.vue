@@ -1,6 +1,6 @@
 <template>
-  <header>
-      <p>这是头部</p>
+  <header class="header">
+      <mt-header fixed title="微商"></mt-header>
   </header>
 </template>
 
