@@ -1,25 +1,45 @@
 <template>
     <section class="swipe">
-        <div class="mint-swipe-items-wrap">
-            <div class="mint-swipe-item slide1">1</div>
-            <div class="mint-swipe-item slide2 is-active">2</div>
-            <div class="mint-swipe-item slide3" style="transform: translate3d(-316px, 0px, 0px);">3</div>
-        </div>
-        <div class="mint-swipe-indicators">
-            <div class="mint-swipe-indicator"></div>
-            <div class="mint-swipe-indicator is-active"></div>
-            <div class="mint-swipe-indicator"></div>
-        </div>
+        <mt-swipe :auto="4000">
+            <mt-swipe-item v-for="(item,i) in list" :key="i">
+                <img :src="item.img">
+            </mt-swipe-item>
+        </mt-swipe>
     </section>
 </template>
 
 <script>
-    export default{
-
+import domain from '../../js/config.js';
+export default {
+    data() {
+        return {
+            list: []
+        }
+    },
+    methods: {
+        getLunBo() {
+            this.$http.get(domain.swipeUrl).then(resp => {
+                console.log(resp);
+                if (resp.body.status == 0) {
+                    this.list = resp.body.message;
+                }
+            })
+        }
+    },
+    // 生命周期函数调用
+    created() {
+        this.getLunBo();
     }
+}
 </script>
 
 
 <style lang='less'>
-
+.swipe {
+    height: 150px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
 </style>

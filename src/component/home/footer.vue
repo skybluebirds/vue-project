@@ -32,5 +32,7 @@ export default {
 
 
 <style lang='less'>
-
+.footer{
+    height:50px;
+}
 </style>

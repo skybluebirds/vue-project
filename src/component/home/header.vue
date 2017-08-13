@@ -12,5 +12,7 @@
 
 
 <style>
-
+.header{
+    height:40px;
+}
 </style>
