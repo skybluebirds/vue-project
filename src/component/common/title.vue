@@ -1,7 +1,7 @@
 <template>
   <section class="title">
     <header class="mint-header">
-      <div class="mint-header-button is-left">
+      <div @click="rollback" class="mint-header-button is-left">
         <a href="#/" class="router-link-active">
           <button class="mint-button mint-button--default mint-button--normal">
             <span class="mint-button-icon">
@@ -19,7 +19,13 @@
 
 <script>
 export default {
-  props: ['title']
+  props: ['title'],
+  methods:{
+    // $router中有一个返回上一页的操作方法
+    rollback(){
+      this.$router.go(-1);
+    }
+  }
 }
 </script>
 

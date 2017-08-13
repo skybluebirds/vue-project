@@ -3,7 +3,7 @@
         <v-title :title='title'></v-title>
         <ul class="mui-table-view">
             <li class="mui-table-view-cell mui-media" v-for="item in list" :key="item.id">
-                <a href="javascript:;" class="">
+                <router-link :to="'/news/details/'+item.id" >
                     <img class="mui-media-object mui-pull-left" :src="item.img_url">
                     <div class="mui-media-body">
                         {{item.title}}
@@ -12,7 +12,7 @@
                             <span>点击量：{{item.click}}</span>
                         </p>
                     </div>
-                </a>
+                </router-link>
             </li>
         </ul>
     </article>
@@ -31,7 +31,7 @@ export default {
     methods: {
         getNewsList() {
             this.$http.get(config.newsListUrl).then(resp => {
-                console.log(resp);
+                // console.log(resp);
                 if(resp.body.status ==0){
                     this.list = resp.body.message;
                 }
