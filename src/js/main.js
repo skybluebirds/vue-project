@@ -13,7 +13,10 @@ Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(MintUI);
 
-// 二、
+// 二、导入自己的模块
+
+// 2.3 导入过滤器
+import './filters.js';
 
 // 2.1导入自己的模块
 import router from './router.js';
