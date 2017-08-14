@@ -11,23 +11,26 @@
                 <div class="mui-card-content-inner" v-html='details.content'></div>
             </div>
         </div>
+        <v-comment :id='id'></v-comment>
     </section>
 </template>
 
 <script>
 import config from '../../js/config';
 import Ctitle from '../common/title.vue';
+import Ccomment from '../common/comment.vue';
 export default {
     data() {
         return {
             details: {},
-            title: '新闻详情'
+            title: '新闻详情',
+            id:this.$route.params.id
         }
     },
     methods: {
         getDetails() {
             this.$http.get(config.newsDetailsUrl + this.$route.params.id).then(resp => {
-                console.log(resp);
+                // console.log(resp);
                 if (resp.body.status == 0) {
                     this.details = resp.body.message[0];
                 }
@@ -38,7 +41,8 @@ export default {
         this.getDetails();
     },
     components: {
-        'v-title': Ctitle
+        'v-title': Ctitle,
+        'v-comment':Ccomment
     }
 }
 </script>
@@ -52,6 +56,9 @@ export default {
         }
         .mui-card-content p {
             color: #000;
+            img{
+                width: 100%;
+            }
         }
     }
 }

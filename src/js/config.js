@@ -5,5 +5,7 @@ export default {
     domain,
     swipeUrl: domain + '/api/getlunbo',
     newsListUrl: domain + '/api/getnewslist',
-    newsDetailsUrl:domain + '/api/getnew/'
+    newsDetailsUrl: domain + '/api/getnew/',
+    commentPut: domain + '/api/postcomment/',
+    commentGet: domain +'/api/getcomments/',
 }

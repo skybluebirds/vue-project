@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  // 父组件数据传递到子组件
   props: ['title'],
   methods:{
     // $router中有一个返回上一页的操作方法
