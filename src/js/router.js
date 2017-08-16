@@ -7,6 +7,11 @@ import Cindex from '../component/index/index.vue';
 import CnewsList from '../component/news/list.vue';
 // 导入details组件
 import CnewsDetails from '../component/news/details.vue';
+// 导入photo中的list组件
+import CphotoList from '../component/photo/list.vue';
+// 导入photo中的details组件
+import CphotoDetails from '../component/photo/details.vue';
+
 
 // 创建组件
 
@@ -17,6 +22,8 @@ export default new VueRouter({
         { path: '/', redirect: '/index' },
         { path: '/index', component: Cindex },
         { path: '/news/list', component: CnewsList },
-        {path:'/news/details/:id',component:CnewsDetails}
+        { path: '/news/details/:id', component: CnewsDetails },
+        {path:'/photo/list/:id',component:CphotoList},
+        {path:'/photo/details/:id',component:CphotoDetails}
     ]
 })

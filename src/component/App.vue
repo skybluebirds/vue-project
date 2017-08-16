@@ -1,5 +1,7 @@
 <template>
     <main>
+        <!--lg-preview需要在内容之上显示  -->
+        <lg-preview></lg-preview>   
         <v-header></v-header>
         <router-view></router-view>
         <v-footer></v-footer>

@@ -36,7 +36,7 @@ export default {
 
 <style lang='less'>
 .swipe {
-    height: 150px;
+    height: 200px;
     img {
         width: 100%;
         height: 100%;

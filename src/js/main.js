@@ -15,6 +15,10 @@ Vue.use(MintUI);
 
 // 二、导入自己的模块
 
+// 2.4 导入图片预览
+import vuePicturePreview from 'vue-picture-preview'
+Vue.use(vuePicturePreview)
+
 // 2.3 导入过滤器
 import './filters.js';
 

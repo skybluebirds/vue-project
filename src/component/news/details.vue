@@ -24,7 +24,7 @@ export default {
         return {
             details: {},
             title: '新闻详情',
-            id:this.$route.params.id
+            id: this.$route.params.id
         }
     },
     methods: {
@@ -42,7 +42,7 @@ export default {
     },
     components: {
         'v-title': Ctitle,
-        'v-comment':Ccomment
+        'v-comment': Ccomment
     }
 }
 </script>
@@ -56,7 +56,7 @@ export default {
         }
         .mui-card-content p {
             color: #000;
-            img{
+            img {
                 width: 100%;
             }
         }
